@@ -952,7 +952,7 @@ function copyOnClick(e, fn) {
 }
 
 function generationNewCharacter() {
-	let bodySexx = getBodySex();
+	let bodySex = getBodySex();
     return `
 Катастрофа:
 ${generationCatastrophe()}    
@@ -966,13 +966,13 @@ ${generationBunker()}
 
 2) ${getAgeCharacter()}
 
-3) ${bodySexx.text}
+3) ${bodySex.text}
 
-4) ${getHealthStatus(bodySexx.body.value)}
+4) ${getHealthStatus(bodySex.body.value)}
 
 5) ${getPhobia()}
 
-6) ${getAddInformation(bodySexx.body.value, bodySexx.sex.value)}
+6) ${getAddInformation(bodySex.body.value, bodySex.sex.value)}
 
 7) ${getBaggage()}
 
