@@ -1044,8 +1044,20 @@ function getBodySex() {
     let sex = getRandom(1, 100) % 2 === 0 ? {text : 'мужчина', value : 0} : {text : 'женщина', value : 1}
     let body = getRandom(0, 100)
     let height = getRandom(0, 100)
-    height = height <= 24 ? 'Вы карлик' : height <= 74 ? 'Вы среднего роста' : 'Вы великан'	
-    body = body <= 24 ? {text : 'Вы анарексик', value : 10} : body <= 74 ? {text : 'У вас нормальный вес', value : 0} : {text : 'Вы жиробас', value : 10}
+    let reductionMuch = 15
+    let reductionMedium = 8
+
+    height = height  <= 20 ? { text: 'Вы метр с кепкой (очень низкого роста)', value : reductionMuch }
+        : height <= 35 ? { text: 'Вы дышите людям в сисечку(немного ниже нормального роста)', value: reductionMedium }
+            : height <= 65 ? { text: 'Вы среднего роста', value: 0 }
+                : height <= 80 ? { text: 'Большинство других людей дышит вам в сисечку(немного выше нормального роста)', value: reductionMedium }
+                    : { text: 'Вы великан', value: reductionMuch }
+
+    body = body <= 20 ? { text: 'Вы анарексик', value: reductionMuch }
+        : body <= 35 ? { text: 'Вы худой', value: reductionMedium }
+            : body <= 65  ? { text: 'У вас нормальный вес', value: 0 }
+                : body <= 80  ? { text: 'У вас лёгкая полнота', value: reductionMedium }
+                    : { text: 'Вы жиробас', value: reductionMuch }
 
     return {
 		text : `Пол, Телосложение: 
