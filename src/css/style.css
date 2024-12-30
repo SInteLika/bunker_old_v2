@@ -1,0 +1,94 @@
+body {
+  background: url("../img/racim-amr-aZcH9Iphnp8-unsplash.jpg") center/cover no-repeat;
+  color: white;
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+textarea {
+  color: white;
+  min-height: 100%;
+  resize: none;
+  font-size: 20px;
+}
+
+.blockAll {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.container-area {
+  display: flex;
+}
+.container-area__area {
+  border-radius: 10px;
+  margin-right: 15px;
+  background: #27292D;
+  padding: 20px;
+  border: darkorange 1px solid;
+  min-width: 380px;
+  min-height: 400px;
+}
+
+.generation {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.generation-title__text {
+  text-transform: uppercase;
+  position: absolute;
+  top: -85px;
+  left: 15px;
+  text-align: center;
+}
+.generation-btn {
+  display: flex;
+  margin: 0 15px;
+}
+.generation-btn-column__row {
+  position: relative;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border: darkorange 2px solid;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 20px 55px;
+  background-color: #27292D;
+  border-radius: 10px;
+}
+.generation-btn-column__row:active {
+  position: relative;
+  top: 3px;
+}
+.generation-btn-column__ok {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icon_ok.png") 90% 50%/30px 30px no-repeat;
+}
+
+.generation-btn_width {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
